@@ -1,0 +1,21 @@
+{
+    "name": "angular-bootstrap",
+    "version": "0.0.1",
+    "private": true,
+    "authors": [
+        "Robin Coma Delperier <rcomadelperier@sqli.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:robinComa/angular-scaffolding.git"
+    },
+    "description": "Angular bootstrap project",
+    "dependencies": {
+        "bootstrap": "3.1.1",
+        "angular": "1.3.3",
+        "angular-route": "1.3.3",
+        "angular-resource": "1.3.3",
+        "angular-mocks": "1.3.3"
+    },
+    "devDependencies": {}
+}

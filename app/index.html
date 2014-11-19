@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Angular Bootstrap</title>
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="angularBootstrap">
+
+    <a href="#/books" class="btn btn-primary">Home</a>
+
+    <div class="container" ng-view></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/plugins.js -->
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="app.js"></script>
+    <script src="src/resources/models/book.js"></script>
+    <script src="src/books/list.js"></script>
+    <script src="src/books/item.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/templates.js -->
+    <!-- Keep one line empty -->
+    <!-- endbuild -->
+
+</body>
+</html>
