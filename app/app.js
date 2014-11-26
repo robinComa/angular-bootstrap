@@ -24,6 +24,7 @@ angular.module('angularBootstrap', [
 
     // Book
     $httpBackend.whenGET(/rest-api\/books$/).respond($resource('src/resources/stub/books/GET.json').query());
+    $httpBackend.whenPOST(/rest-api\/books$/).respond($resource('src/resources/stub/books/POST.json').get());
     $httpBackend.whenDELETE(/rest-api\/books\/[0-9]*$/).respond(200);
     $httpBackend.whenGET(/rest-api\/books\/1$/).respond($resource('src/resources/stub/books/GET-1.json').get());
     $httpBackend.whenGET(/rest-api\/books\/2$/).respond($resource('src/resources/stub/books/GET-2.json').get());

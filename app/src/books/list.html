@@ -3,3 +3,31 @@
         {{book.title}}
     </a>
 </div>
+
+<hr>
+
+<form name="myForm" ng-submit="submitNewBook()" novalidate>
+	<input class="col-xs-12" type="text" name="title" ng-model="newbook.title" required/>
+
+<p ng-show="myForm.title.$invalid">
+	Title invalide
+</p>
+
+	<textarea class="col-xs-12" name="description" ng-model="newbook.description" required>
+
+	</textarea>
+<p ng-show="myForm.description.$invalid">
+	description invalide
+</p>
+
+<button type="submit">submit</button>
+
+</form>
+
+<p ng-show="myForm.$invalid">
+	Formulaire invalide
+</p>
+
+<pre>
+{{myForm | json}}
+</pre>
