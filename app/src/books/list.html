@@ -1,10 +1,25 @@
+
+<ups-book data="books[0]">
+	<div>titre de ma super directive</div>
+</ups-book>
+
+<input ng-model="searchModel"/>
+
 <div class="list-group">
-    <a href="#/books/{{book.id}}" class="list-group-item" ng-repeat="book in books">
+    <a ygyghref="#/books/{{book.id}}" class="list-group-item" ng-repeat="book in books | filter:searchModel | orderBy:'date'">
         {{book.title}}
+        {{book.date | date:'yy mm : ss'}}
+        {{book.read | checkmark}}
+        <button ng-click="updateBook(book)">Update 0</button>
+    	<input type="checkbox" ng-model="book.read"/>
     </a>
 </div>
 
+	{{books | json | uppercase}}
+
+
 <hr>
+
 
 <form name="myForm" ng-submit="submitNewBook()" novalidate>
 	<input class="col-xs-12" type="text" name="title" ng-model="newbook.title" required/>

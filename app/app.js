@@ -3,13 +3,30 @@
 angular.module('angularBootstrap', [
     'ngMockE2E',
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'ngUps'
 ]).config(['$routeProvider', function($routeProvider){
 
     $routeProvider.
         when('/books', {
             templateUrl: 'src/books/list.html',
-            controller: 'BookListCtrl'
+            controller: 'BookListCtrl',
+            resolve: {
+                myAsyncValue: function($q){
+                    var deferred = $q.defer();
+                    setTimeout(function(){
+                        deferred.resolve(8)
+                    }, 1);
+                    return deferred.promise;
+                },
+                myAsyncValue2: function($q){
+                    var deferred = $q.defer();
+                    setTimeout(function(){
+                        deferred.resolve(8)
+                    }, 1);
+                    return deferred.promise;
+                }
+            }
         }).
         when('/books/:bookId', {
             templateUrl: 'src/books/item.html',

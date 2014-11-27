@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('angularBootstrap').controller('BookCtrl', ['$scope', '$routeParams', 'Book', function ($scope, $routeParams, Book) {
+angular.module('angularBootstrap').controller('BookCtrl', 
+	['$scope', '$routeParams', 'Book', 'MyService', 'MyFactory', 
+	function ($scope, $routeParams, Book, MyService, MyFactory) {
+	MyService.doSomething();
+	MyFactory.doSomething();
 
     $scope.book = Book.get({id: $routeParams.bookId});
 
